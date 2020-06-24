@@ -1,0 +1,11 @@
+.logo {
+  @extend %link-td-none;
+  @include font(700, 26px, 1.2, none);
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.logo-nav {
+  color: $title-text-color;
+}

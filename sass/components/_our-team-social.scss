@@ -1,0 +1,43 @@
+.icon-social {
+  @extend %centered-flex;
+  width: 44px;
+  height: 44px;
+  background-color: $title-text-white;
+  border-radius: 50%;
+
+  .our-team-social & {
+    background-color: $title-text-white;
+    @include transition(background-color);
+  }
+
+  .our-team-social &:hover,
+  .our-team-social &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.our-team .social:not(:last-child) {
+  margin-right: 11px;
+}
+
+.our-team-social {
+  @extend %list-style;
+  @extend %centered-flex;
+  margin-bottom: 24px;
+
+  .social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .button-icon {
+    fill: $icon-border-color;
+    @include transition(fill);
+  }
+}
+
+.button-icon {
+  .our-team-social .icon-social:hover &,
+  .our-team-social .icon-social:focus & {
+    fill: $title-text-white;
+  }
+}

@@ -1,0 +1,60 @@
+.footer {
+  background-color: $footer-bg-color;
+
+  .page-footer {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+}
+
+.footer-item {
+  .logo {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    .logo-footer {
+      color: $title-text-white;
+    }
+  }
+
+  .title-white {
+    margin-top: 0;
+    margin-bottom: 9px;
+    color: $title-text-white;
+    font-style: normal;
+  }
+
+  p.title-white.join {
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include font();
+  }
+}
+
+.footer-nav {
+  @extend %list-style;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  li:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  .address {
+    @extend %link-td-none;
+    color: $mail-address-footer;
+    font-style: normal;
+  }
+}

@@ -1,0 +1,32 @@
+.feature {
+  @extend %section;
+  border-bottom: 1px solid $header-line;
+  .section-title {
+    @extend %visually-hidden;
+  }
+}
+
+.feature-list {
+  @extend %list-style;
+  display: flex;
+  flex-wrap: wrap;
+  .title {
+    @include font();
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $title-text-color;
+  }
+  .item {
+    width: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.box-icon {
+  @extend %centered-flex;
+  height: 120px;
+  background-color: $second-bgc-color;
+  border-radius: 4px;
+}

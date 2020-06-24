@@ -1,0 +1,45 @@
+.our-work {
+  @extend %section;
+
+  .section-title {
+    @extend %section-title;
+  }
+
+  .work-examples {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.work-list {
+  @extend %list-style;
+  display: flex;
+
+  .title-white {
+    @include font(700, 14px, 1.14, uppercase);
+    margin: 0;
+    padding: 0;
+    color: $title-text-white;
+  }
+}
+
+.work-list .item {
+  width: calc((100%-60px) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-cont {
+    position: relative;
+
+    .text-bgc {
+      @extend %centered-flex;
+      position: absolute;
+      bottom: 0;
+      height: 70px;
+      width: 100%;
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+}

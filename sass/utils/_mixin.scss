@@ -1,0 +1,25 @@
+@mixin font(
+  $weight: 700,
+  $size: 14px,
+  $height: 1.14,
+  $text-transform: uppercase
+) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-transform: $text-transform;
+}
+
+@mixin transition($property) {
+  transition: $property 250ms $cubic;
+}
+
+@mixin two-transitions(
+  $first-property,
+  $second-property,
+  $time: 250ms,
+  $timing-function: $cubic
+) {
+  transition: $first-property $time $timing-function,
+    $second-property $time $timing-function;
+}

@@ -1,0 +1,23 @@
+// цвет основного текста #757575 - p, мыло и телефон шапки    --primary-text-color
+// цвет вторичного текста #212121 - h2, header nav\     --title-text-color
+// цвет вторичного текста белый #FFFFFF - h1, footer, button, logo footer, address, section h3 Чем мы занимаемся    --title-text-white
+// цвет мыла и телефона в футере rgba(255, 255, 255, 0.6);\    --mail-address-footer
+// цвет копирайта rgba(255, 255, 255, 0.4);\    --copyright-color
+// цвет акцента #2196F3 - logo, :hover, :focus\    --accent-color
+// вторичный цвет фона #F5F4FA\    --second-bgc-color
+// цвет фона футера  #2f303a\    --footer-bg-color
+
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$title-text-white: #ffffff;
+$mail-address-footer: rgba(255, 255, 255, 0.6);
+$copyright-color: rgba(255, 255, 255, 0.4);
+$accent-color: #2196f3;
+$second-bgc-color: #f5f4fa;
+$footer-bg-color: #2f303a;
+$icon-border-color: #afb1b8;
+$copyright-line: rgba(255, 255, 255, 0.1);
+$header-line: #ececec;
+$card-border-line: #eeeeee;
+$item-bg-color: rgba(47, 48, 58, 0.8);
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

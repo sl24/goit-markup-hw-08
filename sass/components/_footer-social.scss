@@ -1,0 +1,27 @@
+.footer-social {
+  @extend %list-style;
+
+  display: flex;
+
+  .social-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .icon-social {
+    background-color: $copyright-line;
+    fill: $title-text-white;
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+
+    .button-icon {
+      fill: $title-text-white;
+    }
+  }
+}

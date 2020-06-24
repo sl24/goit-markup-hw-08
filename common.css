@@ -1,0 +1,490 @@
+/* цвет основного текста #757575 - p, мыло и телефон шапки    --primary-text-color*/
+/* цвет вторичного текста #212121 - h2, header nav\     --title-text-color*/
+/* цвет вторичного текста белый #FFFFFF - h1, footer, button, logo footer, address, section h3 Чем мы занимаемся    --title-text-white */
+/* цвет мыла и телефона в футере rgba(255, 255, 255, 0.6);\    --mail-address-footer*/
+/* цвет копирайта rgba(255, 255, 255, 0.4);\    --copyright-color*/
+/* цвет акцента #2196F3 - logo, :hover, :focus\    --accent-color*/
+/* вторичный цвет фона #F5F4FA\    --second-bgc-color*/
+/* цвет фона футера  #2f303a\    --footer-bg-color*/
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --title-text-white: #ffffff;
+  --mail-address-footer: rgba(255, 255, 255, 0.6);
+  --copyright-color: rgba(255, 255, 255, 0.4);
+  --accent-color: #2196f3;
+  --second-bgc-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --icon-border-color: #afb1b8;
+  --copyright-line: rgba(255, 255, 255, 0.1);
+  --header-line: #ececec;
+  --card-border-line: #eeeeee;
+  --item-bg-color: rgba(47, 48, 58, 0.8);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--title-text-white);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Утилиты */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* прячем заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Временный цвет фона для того чтобы видеть абзацы с белым текстом!!!!!!!!!!!!!! */
+/* .temporary-bgc {
+  background-color: #afeeee;
+} */
+
+/* Логотип */
+
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.logo-nav {
+  color: var(--title-text-color);
+}
+
+/* Навигация шапки */
+
+/* .section {
+  outline: 1px solid green;
+} */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+}
+
+.page-header {
+  border-bottom: 1px solid var(--header-line);
+}
+
+/* Main nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Site nav, contacts nav */
+
+.site-nav {
+  margin-left: 86px;
+}
+
+.site-nav,
+.contacts-nav {
+  display: flex;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.contacts-nav {
+  margin-left: auto;
+}
+
+.contacts-nav .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts-nav .link {
+  display: inline-flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  color: var(--primary-text-color);
+}
+
+.site-nav .link,
+.contacts-nav .link {
+  transition: color 250ms var(--cubic);
+}
+
+.contacts-nav .button-icon {
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--cubic);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts-nav .link:hover,
+.contacts-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.contacts-nav .link:hover .button-icon,
+.contacts-nav .link:focus .button-icon {
+  fill: var(--accent-color);
+}
+
+/* Иконки в шапке */
+
+.contacts-nav .button-icon {
+  margin-right: 10px;
+}
+
+/* Оставил для себя оформление через псевдоэлементы */
+/* .envelope::before {
+  content: "";
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+/* .smartphone::before {
+  content: "";
+  height: 15px;
+  width: 10px;
+  margin-right: 10px;
+  background-image: url(../images/smartphone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+/* Подчеркивание текущей страницы в шапке */
+.site-nav .item {
+  position: relative;
+}
+
+.site-nav .current::after {
+  content: "";
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Подвал */
+
+footer {
+  background-color: var(--footer-bg-color);
+}
+
+.page-footer {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 55px;
+  margin-bottom: 28px;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.footer-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.logo-footer {
+  color: var(--title-text-white);
+}
+
+.footer .address {
+  color: var(--mail-address-footer);
+  font-style: normal;
+}
+
+.footer .title-white {
+  margin-top: 0;
+  margin-bottom: 9px;
+
+  color: var(--title-text-white);
+  font-style: normal;
+}
+
+.footer-item p.title-white.join {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* Полписка в футере */
+.footer .subscribe {
+  display: flex;
+  flex-direction: row;
+}
+
+.subscribe-form {
+  margin: 0 12px 0 0;
+}
+
+.subscribe-form input[type="email"] {
+  min-width: 358px;
+  height: 50px;
+  padding: 18px 12px;
+  background-color: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* конец подписки )) */
+
+.copyright {
+  color: var(--copyright-color);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.page-footer .developed {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 21px;
+  border-top: 1px solid var(--copyright-line);
+}
+
+.footer-button {
+  display: inline-flex;
+  border-radius: 4px;
+  padding: 5px 29px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--title-text-white);
+  background-color: var(--accent-color);
+}
+
+/* Иконка самолетика в подвале */
+
+.button-icon.delivery {
+  margin-left: 10px;
+}
+
+/* Соцсети в футере */
+.footer-social {
+  display: flex;
+}
+
+.footer-social .social-item {
+  display: flex;
+}
+
+.footer-social .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--title-text-white);
+  border-radius: 50%;
+}
+
+.footer-social .icon-social {
+  background-color: var(--copyright-line);
+  fill: var(--title-text-white);
+  transition: background-color 250ms var(--cubic);
+}
+
+.footer-social .icon-social:hover,
+.footer-social .icon-social:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social .button-icon {
+  fill: var(--title-text-white);
+}
+
+.our-team-social .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-social .button-icon {
+  fill: var(--icon-border-color);
+  transition: fill 250ms var(--cubic);
+}
+
+.our-team-social .icon-social:hover .button-icon,
+.our-team-social .icon-social:focus .button-icon {
+  fill: var(--title-text-white);
+}
+
+.our-team-social .icon-social {
+  background-color: var(--title-text-white);
+  transition: background-color 250ms var(--cubic);
+}
+
+.our-team-social .icon-social:hover,
+.our-team-social .icon-social:focus {
+  background-color: var(--accent-color);
+}
+
+/* Оставил для себя оформление через псевдоэлементы */
+/* .footer-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/icon_send.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+/* Иконки соцсетей Нашей команды и футера*/
+/* .icon-social {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.icon-social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-social .icon-social {
+  background-color: #ffffff;
+}
+
+.our-team-social .instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.our-team-social .twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.our-team-social .facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.our-team-social .linkedin {
+  background-image: url(../images/linkedin.svg);
+}
+
+.footer-social .icon-social {
+  background-color: var(--copyright-line);
+}
+
+.footer-social .instagram {
+  background-image: url(../images/instagram_white.svg);
+}
+
+.footer-social .twitter {
+  background-image: url(../images/twitter_white.svg);
+}
+
+.footer-social .facebook {
+  background-image: url(../images/facebook_white.svg);
+}
+
+.footer-social .linkedin {
+  background-image: url(../images/linkedin_white.svg);
+}
+
+.footer-social .icon-social:hover {
+  background-color: var(--accent-color);
+} */
+
+/* --------- */
