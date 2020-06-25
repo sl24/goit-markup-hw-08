@@ -1,13 +1,8 @@
-@mixin font(
-  $weight: 700,
-  $size: 14px,
-  $height: 1.14,
-  $text-transform: uppercase
-) {
+@mixin font($weight: 400, $size: 16px, $height: 1.18, $letter-spacing: 0.03em) {
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
-  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
 }
 
 @mixin transition($property) {

@@ -1,12 +1,12 @@
 .subscribe {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 
   .subscribe-form {
     margin: 0 12px 0 0;
 
     input[type="email"] {
-      min-width: 358px;
+      // min-width: 358px;
       height: 50px;
       padding: 18px 12px;
       background-color: inherit;
@@ -24,7 +24,7 @@
   .footer-button {
     @extend %link-td-none;
 
-    display: inline-flex;
+    // display: inline-flex;
     border-radius: 4px;
     padding: 5px 29px;
     align-items: center;

@@ -1,7 +1,7 @@
 .example {
   @extend %list-style;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
 
   &-item {
     width: calc((100% - 60px) / 3);
@@ -42,7 +42,7 @@
       height: 100%;
       padding: 63px 23px;
       margin: 0;
-      @extend %centered-flex;
+      // @extend %centered-flex;
       opacity: 1;
       background-color: rgba(33, 150, 243, 0.9);
       transform: translateY(100%);

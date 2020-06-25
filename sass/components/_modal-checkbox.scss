@@ -3,7 +3,7 @@
 
   .checkbox-label {
     position: relative;
-    @extend %inline-flex;
+    // @extend %inline-flex;
 
     .checkbox-input {
       @extend %visually-hidden;

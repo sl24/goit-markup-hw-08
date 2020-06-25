@@ -1,20 +1,73 @@
 .site-nav,
 .contacts-nav {
   @extend %list-style;
-  display: flex;
+  // display: flex;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(500, 18px, 1.17, 0.02em);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu-container {
+    // background-color: #2a2a2a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 20px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16),
+        0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+
+      &.is-open {
+        display: block;
+      }
+    }
+  }
+}
+
+.menu-button {
+  .icon-cross {
+    display: none;
+  }
+  &.is-open {
+    .icon-cross {
+      display: block;
+    }
+    .icon-menu {
+      display: none;
+    }
+  }
 }
 
 .site-nav {
-  margin-left: 86px;
+  // margin-left: 86px;
 
   .link {
     @extend %link-td-none;
     display: block;
-    padding-top: 32px;
     padding-bottom: 32px;
     @include transition(color);
 
@@ -22,6 +75,11 @@
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+
+    @media screen and (min-width: 480px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
   }
   .current {
@@ -50,7 +108,7 @@
 
   .link {
     @extend %link-td-none;
-    display: inline-flex;
+    // display: inline-flex;
     padding-top: 32px;
     padding-bottom: 32px;
     align-items: center;

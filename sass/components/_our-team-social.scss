@@ -1,5 +1,5 @@
 .icon-social {
-  @extend %centered-flex;
+  // @extend %centered-flex;
   width: 44px;
   height: 44px;
   background-color: $title-text-white;
@@ -22,7 +22,7 @@
 
 .our-team-social {
   @extend %list-style;
-  @extend %centered-flex;
+  // @extend %centered-flex;
   margin-bottom: 24px;
 
   .social-item:not(:last-child) {
