@@ -1,7 +1,8 @@
 .footer-social {
   @extend %list-style;
 
-  // display: flex;
+  display: flex;
+  justify-content: center;
 
   .social-item {
     display: flex;

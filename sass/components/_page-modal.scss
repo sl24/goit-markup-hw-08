@@ -6,6 +6,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
+  overflow-y: scroll;
+
   visibility: visible;
   opacity: 1;
   @include two-transitions(opacity, visibility);
@@ -17,8 +19,12 @@
   left: 50%;
   padding: 40px;
 
-  // width: 528px;
-  // height: 581px;
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  width: 528px;
   background-color: #fff;
 
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -29,7 +35,7 @@
   @include transition(transform);
 
   .button-close {
-    // @extend %centered-flex;
+    @extend %centered-flex;
 
     border-radius: 50%;
     background-color: #fff;
@@ -50,6 +56,10 @@
     margin-bottom: 30px;
     text-align: center;
     line-height: 1.15;
+
+    @media screen and (max-width: 1199px) {
+      line-height: 1.5;
+    }
   }
 }
 
