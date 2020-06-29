@@ -145,27 +145,36 @@
           <ul class="work-list">
             <li class="item">
               <div class="item-cont">
-                <img
-                  class="work-examples"
-                  src="./images/desktop.jpg"
-                  alt="Десктопные приложения"
-                  width="370"
-                  height="294"
-                />
+
+               <picture>
+                <source srcset="
+                 ./images/our-work/desktop.webp   1x,
+                 ./images/our-work/desktop@2x.webp 2x" type="image/webp" />
+                <source srcset="
+                 ./images/our-work/desktop.jpg   1x,
+                 ./images/our-work/desktop@2x.jpg 2x" />
+                <img class="work-examples" src="./images/our-work/desktop.jpg" alt="Десктопные приложения" />
+               </picture>
+
                 <div class="text-bgc">
                   <h3 class="title-white">Десктопные приложения</h3>
                 </div>
               </div>
             </li>
+
             <li class="item">
               <div class="item-cont">
-                <img
-                  class="work-examples"
-                  src="./images/mobile.jpg"
-                  alt="Мобильные приложения"
-                  width="370"
-                  height="294"
-                />
+
+              <picture>
+                <source srcset="
+                 ./images/our-work/mobile.webp   1x,
+                 ./images/our-work/mobile@2x.webp 2x" type="image/webp" />
+                <source srcset="
+                 ./images/our-work/mobile.jpg   1x,
+                 ./images/our-work/mobile@2x.jpg 2x" />
+                <img class="work-examples" src="./images/our-work/mobile.jpg" alt="Мобильные приложения" />
+              </picture>
+
                 <div class="text-bgc">
                   <h3 class="title-white">Мобильные приложения</h3>
                 </div>
@@ -173,13 +182,17 @@
             </li>
             <li class="item">
               <div class="item-cont">
-                <img
-                  class="work-examples"
-                  src="./images/design.jpg"
-                  alt="Дизайнерские решения"
-                  width="370"
-                  height="294"
-                />
+
+               <picture>
+                 <source srcset="
+                  ./images/our-work/design.webp   1x,
+                  ./images/our-work/design@2x.webp 2x" type="image/webp" />
+                 <source srcset="
+                  ./images/our-work/design.jpg   1x,
+                  ./images/our-work/design@2x.jpg 2x" />
+                 <img class="work-examples" src="./images/our-work/design.jpg" alt="Дизайнерские решения" />
+               </picture>
+
                 <div class="text-bgc">
                   <h3 class="title-white">Дизайнерские решения</h3>
                 </div>
@@ -195,11 +208,39 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="our-team">
             <li class="team-member">
-              <img
-                class="photos"
-                src="./images/smith.jpg"
-                alt="Николай Кучеренко"
-              />
+
+              <picture>
+                <source srcset="
+                  ./images/our-team/nikolay-mobile.webp   1x,
+                  ./images/our-team/nikolay-mobile@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/nikolay-mobile.jpg   1x,
+                  ./images/our-team/nikolay-mobile@2x.jpg 2x" 
+                  media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/nikolay-tablet.webp   1x,
+                  ./images/our-team/nikolay-tablet@2x.webp 2x"
+                  type="image/webp"
+                  media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/nikolay-tablet.jpg   1x,
+                  ./images/our-team/nikolay-tablet@2x.jpg 2x"
+                  media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/nikolay-desktop.webp   1x,
+                  ./images/our-team/nikolay-desktop@2x.webp 2x"
+                  type="image/webp"
+                  media="(min-width: 1200px)" />
+                <source srcset="
+                    ./images/our-team/nikolay-desktop.jpg   1x,
+                    ./images/our-team/nikolay-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                <img class="photos" src="./images/our-team/nikolay-mobile.jpg"
+                 alt="Николай Кучеренко" />
+              </picture>
+               
               <h3 class="title">Николай Кучеренко</h3>
               <p class="people">Product Designer</p>
               <ul class="our-team-social list">
@@ -244,13 +285,29 @@
             </li>
 
             <li class="team-member">
-              <img
-                class="photos"
-                src="./images/stewart.jpg"
-                alt="Ольга Иванова"
-                width="270"
-                height="260"
-              />
+
+              <picture>
+                <source srcset="
+                  ./images/our-team/olga-mobile.webp   1x,
+                  ./images/our-team/olga-mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/olga-mobile.jpg   1x,
+                  ./images/our-team/olga-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/olga-tablet.webp   1x,
+                  ./images/our-team/olga-tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/olga-tablet.jpg   1x,
+                  ./images/our-team/olga-tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/olga-desktop.webp   1x,
+                  ./images/our-team/olga-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                <source srcset="
+                  ./images/our-team/olga-desktop.jpg   1x,
+                  ./images/our-team/olga-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img class="photos" src="./images/our-team/olga-mobile.jpg" alt="Ольга Иванова" />
+              </picture>
+
               <h3 class="title">Ольга Иванова</h3>
               <p class="people">Frontend Developer</p>
               <ul class="our-team-social list">
@@ -293,14 +350,30 @@
                 </li>
               </ul>
             </li>
+
             <li class="team-member">
-              <img
-                class="photos"
-                src="./images/jakis.jpg"
-                alt="Андрей Шевченко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="
+                  ./images/our-team/andrei-mobile.webp   1x,
+                  ./images/our-team/andrei-mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/andrei-mobile.jpg   1x,
+                  ./images/our-team/andrei-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source srcset="
+                  ./images/our-team/andrei-tablet.webp   1x,
+                  ./images/our-team/andrei-tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/andrei-tablet.jpg   1x,
+                  ./images/our-team/andrei-tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+                <source srcset="
+                  ./images/our-team/andrei-desktop.webp   1x,
+                  ./images/our-team/andrei-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                <source srcset="
+                  ./images/our-team/andrei-desktop.jpg   1x,
+                  ./images/our-team/andrei-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <img class="photos" src="./images/our-team/andrei-mobile.jpg" alt="Андрей Шевченко" />
+              </picture>
+
               <h3 class="title">Андрей Шевченко</h3>
               <p class="people">Marketing</p>
               <ul class="our-team-social list">
@@ -343,14 +416,31 @@
                 </li>
               </ul>
             </li>
+
             <li class="team-member">
-              <img
-                class="photos"
-                src="./images/doe.jpg"
-                alt="Иван Николаев"
-                width="270"
-                height="260"
-              />
+
+             <picture>
+               <source srcset="
+                ./images/our-team/ivan-mobile.webp   1x,
+                ./images/our-team/ivan-mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+               <source srcset="
+                ./images/our-team/ivan-mobile.jpg   1x,
+                ./images/our-team/ivan-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+               <source srcset="
+                ./images/our-team/ivan-tablet.webp   1x,
+                ./images/our-team/ivan-tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)" />
+               <source srcset="
+                ./images/our-team/ivan-tablet.jpg   1x,
+                ./images/our-team/ivan-tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+               <source srcset="
+                ./images/our-team/ivan-desktop.webp   1x,
+                ./images/our-team/ivan-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+               <source srcset="
+                ./images/our-team/ivan-desktop.jpg   1x,
+                ./images/our-team/ivan-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+               <img class="photos" src="./images/our-team/ivan-mobile.jpg" alt="Иван Николаев" />
+             </picture>
+
               <h3 class="title">Иван Николаев</h3>
               <p class="people">UI Designer</p>
               <ul class="our-team-social list">
