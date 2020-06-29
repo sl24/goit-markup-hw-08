@@ -2,6 +2,11 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   h1 {
     @extend %visually-hidden;
   }
@@ -9,8 +14,13 @@
   .works {
     @extend %list-style;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
   }
 }
 
@@ -21,6 +31,12 @@ button {
 .works-item {
   &:not(:last-child) {
     margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   .names {
