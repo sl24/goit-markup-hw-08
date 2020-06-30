@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  // overflow-x: hidden;
 }
 
 *,
@@ -16,6 +17,7 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+  overflow-x: hidden;
 }
 
 img {
