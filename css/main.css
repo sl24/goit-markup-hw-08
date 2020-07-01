@@ -12,7 +12,6 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
   background-color: #ffffff;
   color: #757575;
   font-family: Roboto, sans-serif;
@@ -941,13 +940,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .footer .page-footer {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer .page-footer {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
