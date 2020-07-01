@@ -1077,7 +1077,7 @@ img {
 
 @media screen and (min-width: 450px) and (max-width: 1199px) {
   .subscribe .subscribe-form input[type="email"] {
-    width: 450px;
+    max-width: 450px;
   }
 }
 
